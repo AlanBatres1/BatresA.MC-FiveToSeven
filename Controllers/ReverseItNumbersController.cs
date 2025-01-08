@@ -17,5 +17,12 @@ namespace BatresA.MC_FiveToSeven.Controllers
         {
             _reverseItNumbersServices = reverseItNumbersServices;
         }
+
+        [HttpGet]
+        [Route("ReverseItNumbers/{number}")]
+        public List <string> ReverseItNumbers(string number)
+        {
+           return _reverseItNumbersServices.ReversedItNumbers(number);
+        }
     }
 }

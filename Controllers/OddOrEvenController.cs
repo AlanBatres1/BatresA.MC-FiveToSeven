@@ -17,5 +17,12 @@ namespace BatresA.MC_FiveToSeven.Controllers
         {
             _oddOrEvenServices = oddOrEvenServices;
         }
+
+        [HttpGet]
+        [Route("OddOrEven/{number}")]
+        public string OddOrEven(int number)
+        {
+            return _oddOrEvenServices.OddOrEven(number);
+        }
     }
 }

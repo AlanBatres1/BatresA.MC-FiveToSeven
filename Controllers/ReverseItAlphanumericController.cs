@@ -17,5 +17,12 @@ namespace BatresA.MC_FiveToSeven.Controllers
         {
             _reverseItAlphanumericServices = reverseItAlphanumericServices;
         }
+
+        [HttpGet]
+        [Route("ReverseItAlphanumeric/{Input}")]
+        public List <string> ReverseItAlphanumeric(string Input)
+        {
+           return _reverseItAlphanumericServices.ReversItAlphanumeric(Input);
+        }
     }
 }
