@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BatresA.MC_FiveToSeven.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BatresA.MC_FiveToSeven.Controllers
@@ -10,6 +11,11 @@ namespace BatresA.MC_FiveToSeven.Controllers
     [Route("[controller]")]
     public class ReverseItNumbersController : ControllerBase
     {
-        
+        private readonly ReverseItNumbersServices _reverseItNumbersServices;
+
+        public ReverseItNumbersController(ReverseItNumbersServices reverseItNumbersServices)
+        {
+            _reverseItNumbersServices = reverseItNumbersServices;
+        }
     }
 }
